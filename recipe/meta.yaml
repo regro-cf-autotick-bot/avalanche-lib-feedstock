@@ -38,6 +38,7 @@ requirements:
     - wandb
     - gym
     - pycocotools
+    - dill
 
 test:
   imports:
