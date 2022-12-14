@@ -39,6 +39,7 @@ requirements:
     - gym
     - pycocotools
     - dill
+    - lvis
 
 test:
   imports:
