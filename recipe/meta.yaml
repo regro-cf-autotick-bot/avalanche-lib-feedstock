@@ -1,5 +1,5 @@
 {% set name = "avalanche-lib" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/avalanche-lib-{{ version }}.tar.gz
-  sha256: 5c642fbe0d921cfc03e53b53428049e2f3ad2699405b62d6dbe5aa013381d78c
+  sha256: 2a67f6d1ee4dba52d8d2147c6a4f36c16f1137aba198cd1ff5109c77b96edbce
 
 build:
   noarch: python
