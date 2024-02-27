@@ -1,5 +1,5 @@
 {% set name = "avalanche-lib" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/avalanche-lib-{{ version }}.tar.gz
-  sha256: 05723284b201e66aa627f5d2d667864d44638eb7234c8e2ce7dd8e2e3fb18527
+  sha256: 66235d850cc5f2f279b3eea9514280caaf0e9d63a357e8051b7b7fe0e82e08a2
 
 build:
   noarch: python
@@ -40,6 +40,7 @@ requirements:
     - pycocotools
     - dill
     - lvis
+    - qpsolvers
 
 test:
   imports:
