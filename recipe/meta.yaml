@@ -35,7 +35,7 @@ requirements:
     - torchvision
     - tqdm
     - typing-extensions
-    - wandb
+    - wandb >=0.18
     - gym
     - pycocotools
     - dill
