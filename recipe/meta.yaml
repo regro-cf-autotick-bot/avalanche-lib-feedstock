@@ -1,13 +1,13 @@
 {% set name = "avalanche-lib" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/avalanche-lib-{{ version }}.tar.gz
-  sha256: 66235d850cc5f2f279b3eea9514280caaf0e9d63a357e8051b7b7fe0e82e08a2
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8d0886e76dbc2a769aa581aa879c711fcf7fa069291bb9986dffdd5d07f91d4a
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ requirements:
     - torchvision
     - tqdm
     - typing-extensions
-    - wandb
+    - wandb >=0.18
     - gym
     - pycocotools
     - dill
