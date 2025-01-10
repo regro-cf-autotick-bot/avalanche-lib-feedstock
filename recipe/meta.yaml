@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 8d0886e76dbc2a769aa581aa879c711fcf7fa069291bb9986dffdd5d07f91d4a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6,<3.11
+    - python {{ python_min }}
     - setuptools <=59.5.0
   run:
     - gdown
@@ -25,7 +25,7 @@ requirements:
     - matplotlib-base
     - numpy
     - psutil
-    - python >=3.6,<3.11
+    - python >={{ python_min }},<3.11
     - pytorchcv
     - quadprog
     - scikit-learn
@@ -43,6 +43,8 @@ requirements:
     - qpsolvers
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - avalanche
 
